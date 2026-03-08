@@ -170,22 +170,27 @@ Building things<br>
 
 <div class="tab-content" id="videos">
     <div class="video-grid">
-
-        <div class="video-card">
+        <div class="video-card" onclick="openModal('bounty.gif', 'Server Mechanics Demo')">
             <img src="bounty.gif" alt="Server Mechanics Demo" loading="lazy" class="gif-style">
             <p>Server Mechanics Demo</p>
         </div>
-
-        <div class="video-card">
+        <div class="video-card" onclick="openModal('auction.gif', 'PvP Gameplay')">
             <img src="auction.gif" alt="PvP Gameplay" loading="lazy" class="gif-style">
             <p>PvP Gameplay</p>
         </div>
-
-        <div class="video-card">
+        <div class="video-card" onclick="openModal('fishing.gif', 'Network Overview')">
             <img src="fishing.gif" alt="Network Overview" loading="lazy" class="gif-style">
             <p>Network Overview</p>
         </div>
+    </div>
+</div>
 
+<div id="gifModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    
+    <div class="modal-content-wrapper">
+        <img id="fullSizeGif" src="" alt="Full Preview">
+        <p id="caption"></p>
     </div>
 </div>
 
