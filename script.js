@@ -38,3 +38,30 @@ p.remove()
 }
 
 setInterval(createParticle,250)
+
+
+// Open Modal
+function openModal(src, text) {
+    const modal = document.getElementById("gifModal");
+    const modalImg = document.getElementById("fullSizeGif");
+    
+    // Debug: If this logs 'undefined', your path is wrong
+    console.log("Loading image from:", src); 
+    
+    modalImg.src = src; 
+    document.getElementById("caption").innerText = text;
+    modal.style.display = "flex";
+}
+
+function closeModal() {
+    // 5. Hide the modal
+    document.getElementById("gifModal").style.display = "none";
+}
+
+// 6. Close when clicking background
+window.onclick = function(event) {
+    const modal = document.getElementById("gifModal");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
