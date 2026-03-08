@@ -335,6 +335,43 @@ display:block;
 .video-card {
     background-color: transparent; 
 }
+/* The background overlay */
+/* Ensure this is exactly how your modal class looks */
+.modal {
+    display: none; /* MUST be none so it stays hidden on page load */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+/* The GIF preview with Outline */
+#fullSizeGif {
+    max-width: 80vw;
+    max-height: 70vh;
+    border: 5px solid #4a90e2; /* Your Custom Outline */
+    box-shadow: 0 0 25px #4a90e2; /* Glowing effect */
+    border-radius: 10px;
+    transform: scale(1.5); /* The "Zoom" effect */
+    transition: transform 0.3s ease;
+}
+
+/* Fix X button position */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10000;
+}
 
 
 /* 1. Hide all tab content by default */
